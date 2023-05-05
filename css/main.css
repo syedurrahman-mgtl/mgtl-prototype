@@ -2503,6 +2503,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2682,8 +2688,8 @@ video {
   /* (A1) FONT */
   font-size: 1.1em;
   /* (A2) COLORS */
-  color: #fff;
-  background: orange;
+  color: #000;
+  background: #FFF6DD;
   /* (A3) DIMENSIONS + POSITION */
   position: relative;
   padding: 20px;
@@ -2708,7 +2714,7 @@ video {
 
 .left.speech::after {
   /* (C2-1) LEFT TRIANGLE */
-  border-right-color: orange;
+  border-right-color: #FFF6DD;
   border-left: 0;
   /* (C2-2) POSITION AT LEFT */
   left: -20px;

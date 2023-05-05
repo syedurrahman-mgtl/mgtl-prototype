@@ -45,8 +45,8 @@
     font-size: 1.1em;
 
     /* (A2) COLORS */
-    color: #fff;
-    background: darkorange;
+    color: #000;
+    background: #FFF6DD;
 
     /* (A3) DIMENSIONS + POSITION */
     position: relative;
@@ -70,7 +70,7 @@
 /* (C2) LEFT */
 .left.speech::after {
     /* (C2-1) LEFT TRIANGLE */
-    border-right-color: darkorange;
+    border-right-color: #FFF6DD;
     border-left: 0;
 
     /* (C2-2) POSITION AT LEFT */
