@@ -41,6 +41,11 @@ module.exports = {
         veryPaleRed: 'hsl(13, 100%, 96%)',
         veryLightGray: 'hsl(0, 0%, 98%)',
         cream: '#FFF6DD',
+
+        myriadShadeOne: '#F68E35',
+        myriadShadeTwo: '#FAA53A',
+        myriadShadeThree: '#FFC335',
+        myriadShadeFour: '#FDE585',
       },
     },
   },

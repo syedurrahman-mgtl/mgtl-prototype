@@ -8,7 +8,7 @@
     list-style: none;
     display: flex;
     width: max-content;
-    animation: moveCarousel 10s linear infinite;
+    animation: moveCarousel 30s linear infinite;
 }
 
 .slider img {
@@ -36,45 +36,4 @@
     } to {
         transform: translateX(calc(-155px * 11));
     }
-}
-
-
-/* (A) SPEECH BOX */
-.speech {
-    /* (A1) FONT */
-    font-size: 1.1em;
-
-    /* (A2) COLORS */
-    color: #000;
-    background: #FFF6DD;
-
-    /* (A3) DIMENSIONS + POSITION */
-    position: relative;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 50px auto;
-    max-width: 320px;
-}
-
-/* (B) ADD SPEECH "CALLOUT TAIL" */
-/* (B1) USE ::AFTER TO CREATE THE "TAIL" */
-.speech::after {
-    /* (B1-1) ATTACH TRANSPARENT BORDERS */
-    content: "";
-    border: 20px solid transparent;
-
-    /* (B1-2) NECESSARY TO POSITION THE "TAIL" */
-    position: absolute;
-}
-
-/* (C2) LEFT */
-.left.speech::after {
-    /* (C2-1) LEFT TRIANGLE */
-    border-right-color: #FFF6DD;
-    border-left: 0;
-
-    /* (C2-2) POSITION AT LEFT */
-    left: -20px;
-    top: 50%;
-    margin-top: -20px;
 }
