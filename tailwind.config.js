@@ -6,30 +6,22 @@ module.exports = {
       poppins: ["'Poppins'", "sans-serif"],
     },
     screens: {
-      xs: "350px",
+      // sm: '480px',
+      sm: '350px',
       // => @media (min-width: 350px) { ... }
-
-      sm: "640px",
-      // => @media (min-width: 640px) { ... }
-
-      md: "938px",
+      
+      md: '768px',
       // => @media (min-width: 768px) { ... }
-
-      lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
-
-      xl: "1280px",
-      // => @media (min-width: 1280px) { ... }
+      
+      lg: '976px',
+      // => @media (min-width: 976px) { ... }
+      
+      xl: '1440px',
+      // => @media (min-width: 1440px) { ... }
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
-    // screens: {
-    //   sm: '480px',
-    //   md: '768px',
-    //   lg: '976px',
-    //   xl: '1440px',
-    // },
     extend: {
       colors: {
         brightRed: 'hsl(12, 88%, 59%)',
