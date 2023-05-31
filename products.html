@@ -10,71 +10,160 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="icon" href="./assets/myriad-icon.png">
         <script src="js/script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <title>Products - MGTL</title>
     </head>
 
     <body class="font-poppins">
+        <!-- arrow button -->
+        <a class="btnBackToTop cursor-pointer z-50 fixed hidden p-3 bg-orange-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+                </path>
+            </svg>
+        </a>
+
         <!-- Desktop Navbar -->
         <div class="sticky top-0 z-50 nav-container bg-white border-b-[1px] border-orange-600 border-opacity-30">
-            <nav class="lg:mx-24 xl:mx-64 px-4 py-4 flex justify-between items-center bg-white">
-                <a class="font-bold leading-none" href="./index.html">
-                    <img src="assets/myriad-logo.png" class="w-40 cursor-pointer" alt="logo">
+        
+            <nav x-data="{ open: false }" class="xl:mx-24 2xl:mx-52 px-4 py-4 flex justify-between items-center bg-white">
+                <a class="font-bold leading-none" href="./">
+                    <img src="assets/myriad-logo.png" class="w-56 cursor-pointer" alt="logo">
                 </a>
-                <div class="lg:hidden">
+                <div onclick="toggleSlideover()" class="mr-8 lg:hidden">
                     <!-- hamburger -->
-                    <button class="navbar-burger flex items-center text-orange-500 p-3">
-                        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>Mobile menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                        </svg>
-                    </button>
+                    <a class="navbar-burger w-14 h-14 relative focus:outline-none rounded" @click="open = !open">
+                        <span class="sr-only">Open main menu</span>
+                        <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <span class="block absolute h-0.5 w-8 bg-orange-500 transform transition duration-500 ease-in-out"
+                                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                            <span class="block absolute  h-0.5 w-5 bg-orange-500 transform transition duration-500 ease-in-out"
+                                :class="{'opacity-0': open } "></span>
+                            <span class="block absolute  h-0.5 w-8 bg-orange-500 transform transition duration-500 ease-in-out"
+                                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                        </div>
+                    </a>
                 </div>
                 <ul
-                    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-12">
-                    <li><a class="text-md text-gray-500 hover:text-orange-500" href="./index.html">Home</a></li>
-                    <li><a class="text-md text-gray-500 hover:text-orange-500" href="./about.html">About Us</a></li>
-                    <li><a class="text-md text-gray-500 hover:text-orange-500" href="./insights.html">Insights</a></li>
+                    class="hidden absolute top-1/2 right-1/4 transform -translate-y-1/2 lg:mx-auto lg:flex lg:items-right lg:w-auto lg:space-x-12">
+                    <li><a class="text-md text-gray-500 px-6 py-2 transition duration-300 ease-in-out hover:text-orange-500"
+                            href="./">Home</a></li>
+        
+                    <li>
+                        <div class="group relative cursor-pointer">
+                            <div
+                                class="flex items-center justify-between px-8 text-gray-500 transition duration-300 ease-in-out hover:text-orange-500 hover:border-b-2 hover:border-b-orange-500">
+                                <a class="menu-hover flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 md:w-auto"
+                                    href="./about.html">
+                                    About Us
+                                </a>
+                                <span>
+                                    <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div
+                                class="invisible absolute z-50 flex w-full flex-col bg-white py-1 text-gray-500 group-hover:visible">
+                                <a href="#"
+                                    class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-orange-50 hover:text-orange-500">Our
+                                    Company</a>
+                                <a href="#"
+                                    class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-orange-50 hover:text-orange-500">Testimonials</a>
+                                <a href="#"
+                                    class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-orange-50 hover:text-orange-500">Our
+                                    People</a>
+                                <a href="#"
+                                    class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-orange-50 hover:text-orange-500">News</a>
+                                <a href="#"
+                                    class="block px-4 py-2 transition duration-300 ease-in-out hover:bg-orange-50 hover:text-orange-500">Careers</a>
+                            </div>
+                        </div>
+                    </li>
+        
+                    <li><a class="text-md text-gray-500 px-6 py-2 transition duration-300 ease-in-out hover:text-orange-500"
+                            href="./insights.html">Insights</a></li>
                 </ul>
-                <a class="hidden lg:inline-block py-2 px-6 bg-orange-500 hover:bg-orange-600 text-sm text-white font-bold rounded-xl transition duration-200"
+                <a class="hidden lg:inline-block px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600 text-sm text-white font-bold rounded-xl"
                     href="#">Request a Demo</a>
             </nav>
         </div>
-
+        
+        
         <!-- Mobile Navbar -->
-        <div class="navbar-menu relative z-50 hidden">
-            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-            <nav
-                class="fixed top-0 right-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-                <div class="flex items-center mb-8">
-                    <a class="mr-auto leading-none" href="./">
-                        <img src="assets/myriad-logo.png" class="w-40 cursor-pointer" alt="logo">
-                    </a>
-                    <button class="navbar-close">
-                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
+        <div id="slideover-container" class="w-full h-full fixed inset-0 z-20 invisible lg:hidden">
+            <!-- this is what allows the navbar to slide in -->
+            <nav id="slideover"
+                class="fixed top-0 right-0 bottom-0 flex flex-col w-full py-6 px-6 bg-white border-r overflow-y-auto duration-500 ease-out transition-all translate-x-full">
                 <div>
-                    <ul>
+                    <ul class="mt-28 text-center mx-12">
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded"
-                                href="./index.html">Home</a>
+                            <a class="block p-8 text-sm font-semibold transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
+                                href="./">Home</a>
                         </li>
-                        <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded"
-                                href="./about.html">About Us</a>
+        
+                        <li class="relative" @click.away="dropdownOpen = false" x-data="{ dropdownOpen: false }">
+                            <a @click="dropdownOpen = !dropdownOpen"
+                                class="block p-8 text-sm font-semibold transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md">
+                                <span class="ml-2">About Us</span>
+                                <svg fill="currentColor" viewBox="0 0 20 20"
+                                    :class="{'rotate-180': dropdownOpen, 'rotate-0': !dropdownOpen}"
+                                    class="inline w-4 h-4 transition-transform duration-200 transform md:-mt-1">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+        
+                            <div x-show="dropdownOpen" x-transition:enter="transition ease-out duration-100"
+                                x-transition:enter-start="transform opacity-0 scale-95"
+                                x-transition:enter-end="transform opacity-100 scale-100"
+                                x-transition:leave="transition ease-in duration-75"
+                                x-transition:leave-start="transform opacity-100 scale-100"
+                                x-transition:leave-end="transform opacity-0 scale-95"
+                                class="right-0 p-2 mt-1 bg-white items-center rounded-md shadow-sm lg:absolute"
+                                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                                @click.away="dropdownOpen = false">
+                                <ul class="space-y-2 lg:w-48">
+                                    <li>
+                                        <a href="#"
+                                            class="block sm:px-auto md:px-48 lg:px-64 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600">Our
+                                            Company</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block sm:px-auto md:px-48 lg:px-64 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block sm:px-auto md:px-48 lg:px-64 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600">Our
+                                            People</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block sm:px-auto md:px-48 lg:px-64 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block sm:px-auto md:px-48 lg:px-64 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600">Careers</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
+        
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded"
+                            <a class="block p-8 text-sm font-semibold transition duration-300 ease-in-out text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-md"
                                 href="./insights.html">Insights</a>
                         </li>
                     </ul>
                 </div>
-                <div class="mt-auto">
+                <!-- Demo Button -->
+                <div class="mt-auto mx-12">
                     <div class="pt-6">
                         <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-orange-600 hover:bg-orange-700  rounded-xl"
                             href="#">Request a Demo</a>
@@ -82,7 +171,6 @@
                 </div>
             </nav>
         </div>
-        <!-- End of Navbar -->
 
 
         <div class="container mx-auto mt-16 w-full items-center px-8 md:px-14 lg:px-24">
