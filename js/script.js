@@ -25,13 +25,13 @@ function backToTop() {
 }
 
 // prevents the navbar from sliding out when page is loaded in mobile view
-document.addEventListener('DOMContentLoaded', function() {  
-  var delayInMilliseconds = 1000; // 1 second
+// document.addEventListener('DOMContentLoaded', function() {  
+//   var delayInMilliseconds = 1000; // 1 second
   
-  setTimeout(function() {
-    document.getElementById('slideover-container').classList.remove('hidden');
-  }, delayInMilliseconds);
-});
+//   setTimeout(function() {
+//     document.getElementById('slideover-container').classList.remove('hidden');
+//   }, delayInMilliseconds);
+// });
 
 function slideNavBar() {
   document.getElementById('slideover-container').classList.toggle('invisible');
