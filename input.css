@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
+
 .slider ul {
     padding: 0;
     list-style: none;

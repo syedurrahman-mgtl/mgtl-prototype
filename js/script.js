@@ -22,10 +22,18 @@ scrollerBtn.addEventListener("click", backToTop);
 function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  document.body.style.scrollBehavior = 'smooth';
 }
 
-function toggleSlideover() {
+// prevents the navbar from sliding out when page is loaded in mobile view
+document.addEventListener('DOMContentLoaded', function() {  
+  var delayInMilliseconds = 500; // 1 second
+  
+  setTimeout(function() {
+    document.getElementById('slideover-container').classList.remove('hidden');
+  }, delayInMilliseconds);
+});
+
+function slideNavBar() {
   document.getElementById('slideover-container').classList.toggle('invisible');
   document.getElementById('slideover').classList.remove('hidden');
   document.getElementById('slideover').classList.toggle('translate-x-full');

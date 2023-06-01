@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <title>MYRIAD Group Technologies Ltd</title>
 </head>
-<body class="font-poppins">
+<body class="font-poppins scroll-smooth">
     <!-- arrow button -->
     <a class="btnBackToTop cursor-pointer z-50 fixed hidden p-3 bg-orange-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-4 h-4" role="img"
@@ -29,7 +29,7 @@
             <a class="font-bold leading-none" href="">
                 <img src="assets/myriad-logo-transparent.png" class="w-56 cursor-pointer" alt="logo">
             </a>
-            <div  onclick="toggleSlideover()" class="mr-8 lg:hidden">
+            <div onclick="slideNavBar()" class="mr-8 lg:hidden">
                 <!-- hamburger -->
                 <a class="navbar-burger w-14 h-14 relative focus:outline-none rounded" @click="open = !open">     
                     <span class="sr-only">Open main menu</span>
@@ -78,7 +78,7 @@
 
 
     <!-- Mobile Navbar -->
-    <div id="slideover-container" class="w-full h-full fixed inset-0 z-20 invisible lg:hidden">
+    <div id="slideover-container" class="w-full h-full fixed inset-0 z-20 invisible hidden lg:hidden">
         <!-- this is what allows the navbar to slide in -->
         <nav id="slideover" class="fixed top-0 right-0 bottom-0 flex flex-col w-full py-6 px-6 bg-white border-r overflow-y-auto duration-500 ease-out transition-all translate-x-full lg:hidden">
             <div>
