@@ -26,7 +26,7 @@ function backToTop() {
 
 // prevents the navbar from sliding out when page is loaded in mobile view
 document.addEventListener('DOMContentLoaded', function() {  
-  var delayInMilliseconds = 1300; // 1 second
+  var delayInMilliseconds = 1300; // 1.3 second delay
   
   setTimeout(function() {
     document.getElementById('slideover-container').classList.remove('hidden');
