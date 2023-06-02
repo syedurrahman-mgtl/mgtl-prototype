@@ -10,6 +10,11 @@ body {
     overflow-x: hidden;
 }
 
+html, body {
+    min-height: 100%;
+}
+
+
 .slider ul {
     padding: 0;
     list-style: none;
