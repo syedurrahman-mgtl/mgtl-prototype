@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .slider ul {
     padding: 0;
     list-style: none;
@@ -61,4 +65,48 @@
 
 .video-content {
     z-index: 2;
+}
+
+
+.myriad-emblem {
+    position: relative;
+    width: auto;
+    max-height: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.myriad-emblem::before {
+    content: "";
+    background: url("../assets/myriad-emblem.png") local no-repeat left center !important;
+    background-attachment: fixed;
+    background-size: cover !important;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: -25rem;
+    opacity: 0.5;
+}
+
+.footer-container {
+    position: relative;
+    width: 100vw;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container::before {
+    content: "";
+    background: url("https://source.unsplash.com/Nkt6IbpmJKo") no-repeat center !important;
+    background-size: cover !important;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
