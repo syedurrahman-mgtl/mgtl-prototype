@@ -358,6 +358,13 @@
         <section class="snap-end bg-yellow-200 w-screen h-screen flex items-center justify-center">Section 5</section>
     </div> -->
 
+    <!-- <div class="snap-y snap-mandatory h-screen overflow-y-scroll">
+        <div class="snap-start bg-amber-200 w-screen h-screen flex items-center justify-center text-8xl">1</div>
+        <div class="snap-start bg-teal-200 w-screen  h-screen flex items-center justify-center text-8xl">2</div>
+        <div class="snap-start bg-cyan-200 w-screen h-screen flex items-center justify-center text-8xl">3</div>
+        <div class="snap-end bg-fuchsia-200 w-screen h-screen flex items-center justify-center text-8xl">4</div>
+    </div> -->
+
 
     <!-- Featured Products -->
     <section id="featured-products">
@@ -504,8 +511,9 @@
         </div>
     </section>
 
-    
-    <footer class="container mt-16">
+
+    <!-- Footer for desktop -->
+    <footer class="hidden sm:block container mt-16">
         <div class="footer-container z-0">
             <span id="blackOverlay" class="w-full h-full absolute opacity-70 bg-black"></span>
             <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 z-10">
@@ -623,6 +631,136 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="mt-12 -mb-8 border-t border-gray-100 pt-6">
+                    <div class="text-center sm:flex sm:justify-center sm:text-center">
+                        <p class="mt-4 text-sm text-white sm:order-first sm:mt-0">
+                            &copy; 2023 MYRIAD Group Technologies Ltd. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer for mobile -->
+    <footer class="sm:hidden container mt-16">
+        <div class="footer-container z-0">
+            <span id="blackOverlay" class="w-full h-full absolute opacity-70 bg-black"></span>
+            <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 z-10">
+                <div class="grid grid-cols-1 gap-8">
+                    <div>
+                        <img src="./assets/myriad-logo-transparent-white.png" class="-ml-4 w-60" alt="logo" />
+                        <div class="flex mt-8 space-x-6 text-white">
+                            <a href="https://twitter.com/MYRIAD_GROUP" rel="noreferrer" target="_blank"
+                                class="text-orange-500 transition hover:text-orange-500/75">
+                                <span class="sr-only"> Twitter </span>
+                                <svg class="h-8 w-8 transform transition hover:-translate-y-1 motion-reduce:transform-none
+                                        motion-reduce:transition-none" fill="currentColor"
+                                    viewBox="328 355 335 276" aria-hidden="true">
+                                    <path d="
+                                            M 630, 425
+                                            A 195, 195 0 0 1 331, 600
+                                            A 142, 142 0 0 0 428, 570
+                                            A  70,  70 0 0 1 370, 523
+                                            A  70,  70 0 0 0 401, 521
+                                            A  70,  70 0 0 1 344, 455
+                                            A  70,  70 0 0 0 372, 460
+                                            A  70,  70 0 0 1 354, 370
+                                            A 195, 195 0 0 0 495, 442
+                                            A  67,  67 0 0 1 611, 380
+                                            A 117, 117 0 0 0 654, 363
+                                            A  65,  65 0 0 1 623, 401
+                                            A 117, 117 0 0 0 662, 390
+                                            A  65,  65 0 0 1 630, 425
+                                            Z" />
+                                </svg>
+                            </a>
+        
+                            <a href="https://www.linkedin.com/company/myriad-group-technologies-ltd/?original_referer="
+                                rel="noreferrer" target="_blank" class="text-orange-500 transition hover:text-orange-500/75">
+                                <span class="sr-only">LinkedIn</span>
+                                <svg class="h-8 w-8 transform transition hover:-translate-y-1 motion-reduce:transform-none
+                                        motion-reduce:transition-none" fill="currentColor" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                        <!-- Accordion 1 -->
+                        <div class="tab w-full overflow-hidden">
+                            <input class="absolute hidden opacity-0" id="tab-multi-one" type="checkbox" name="tabs">
+                            <div class="label relative">
+                                <label class="block text-white font-semibold tracking-wide cursor-pointer"
+                                    for="tab-multi-one">
+                                    Company
+                                </label>
+                                <div class="w-full absolute inset-0 flex flex-end justify-end items-center pointer-events-none">
+                                    <svg class="icon w-8" fill="none" viewBox="0 0 24 24"
+                                        stroke="white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tab-content overflow-hidden leading-normal">
+                                <ul class="w-full flex flex-col text-white list-none p-0 text-left text-sm">
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Disclaimer</a></li>
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Our People</a></li>
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End of Accordion 1 -->
+
+                        <!-- Accordion 2 -->
+                        <div class="tab w-full overflow-hidden">
+                            <input class="absolute hidden opacity-0" id="tab-multi-two" type="checkbox" name="tabs">
+                            <div class="label relative">
+                                <label class="block text-white font-semibold tracking-wide cursor-pointer" for="tab-multi-two">
+                                    Legal
+                                </label>
+                                <div class="w-full absolute inset-0 flex flex-end justify-end items-center pointer-events-none">
+                                    <svg class="icon w-8" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tab-content overflow-hidden leading-normal">
+                                <ul class="w-full flex flex-col text-white list-none p-0 text-left text-sm">
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Terms & Conditions</a></li>
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Privacy Policy</a></li>
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">ISO-IEC 27001</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End of Accordion 2 -->
+
+                        <!-- Accordion 3 -->
+                        <div class="tab w-full overflow-hidden">
+                            <input class="absolute hidden opacity-0" id="tab-multi-three" type="checkbox" name="tabs">
+                            <div class="label relative">
+                                <label class="block text-white font-semibold tracking-wide cursor-pointer" for="tab-multi-three">
+                                    Helpful Links
+                                </label>
+                                <div class="w-full absolute inset-0 flex flex-end justify-end items-center pointer-events-none">
+                                    <svg class="icon w-8" fill="none" viewBox="0 0 24 24" stroke="white">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tab-content overflow-hidden leading-normal">
+                                <ul class="w-full flex flex-col text-white list-none p-0 text-left text-sm">
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Information Security</a></li>
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Sitemap</a></li>
+                                    <li><a href="#" class="inline-block py-2 pl-2 pr-5 text-white no-underline">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End of Accordion 3 -->
                     </div>
                 </div>
                 <div class="mt-12 -mb-8 border-t border-gray-100 pt-6">
