@@ -157,7 +157,7 @@
 
     <!-- Hero -->
     <section id="hero" class="relative">
-        <div class="relative pt-16 pb-40 flex content-center items-center justify-center min-h-screen-75">
+        <div class="relative pt-16 pb-40 flex content-center items-center justify-center h-screen lg:h-full lg:min-h-full-75">
             <!-- <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80');"> -->
             
             <div class="video-docker absolute top-0 left-0 w-full h-full bg-center bg-cover overflow-hidden z-0">
@@ -355,50 +355,169 @@
 
     <!-- Card design on mobile -->
     <section class="lg:hidden flex flex-col bg-white m-auto p-auto">
-        <h1 class="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-bold text-4xl text-gray-800">
+        <h1 class="flex py-5 px-5 mx-5 font-bold text-4xl text-gray-800">
             What we offer
         </h1>
-        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+        <!-- add myriad emblem to the left -->
+        <div class="myriad-emblem">
+        
+            <div class="flex overflow-x-scroll pb-6 hide-scroll-bar ">
+                <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+                    <!-- card 1 -->
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
+                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Cost Management</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black text-clip">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
-                </div>
-                <div class="inline-block px-3">
-                    <div
-                        class="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                    </div>
+    
+                    <!-- card 2 -->
+                        <div class="p-4 max-w-sm overflow-hidden">
+                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                                <div class="relative z-10 mx-auto max-w-md">
+                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                        <div
+                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                            <img src="./assets/list-icon.png" alt="">
+                                        </div>
+                                        <h2 class="text-black text-xl font-semibold">Due Diligence</h2>
+                                    </div>
+                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                        <p class="leading-relaxed text-base text-black">
+                                            Often a demanding and drawn-out process. It can become a straightforward controlled procedure whilst gaining Operational
+                                            efficiencies
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- card 3 -->
+                        <div class="p-4 max-w-sm overflow-hidden">
+                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                                <div class="relative z-10 mx-auto max-w-md">
+                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                        <div
+                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                            <img src="./assets/list-icon.png" alt="">
+                                        </div>
+                                        <h2 class="text-black text-xl font-semibold">Client Onboarding</h2>
+                                    </div>
+                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                        <p class="leading-relaxed text-base text-black">
+                                            An efficient and cost-effective solution will reduce time-to-market, enhance your Clients' experience and provide
+                                            transparency and accountability throughout the process.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- card 4 -->
+                        <div class="p-4 max-w-sm overflow-hidden">
+                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                                <div class="relative z-10 mx-auto max-w-md">
+                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                        <div
+                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                            <img src="./assets/list-icon.png" alt="">
+                                        </div>
+                                        <h2 class="text-black text-xl font-semibold">Account Workflow and Automation</h2>
+                                    </div>
+                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                        <p class="leading-relaxed text-base text-black">
+                                            Complexity by market, account and product, coupled with increased volumes are driving the need for automation. Integrate
+                                            Improve efficiency and the integration of intelligent data across functions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- card 5 -->
+                        <div class="p-4 max-w-sm overflow-hidden">
+                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                                <div class="relative z-10 mx-auto max-w-md">
+                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                        <div
+                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                            <img src="./assets/list-icon.png" alt="">
+                                        </div>
+                                        <h2 class="text-black text-xl font-semibold">Performance Oversight</h2>
+                                    </div>
+                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                        <p class="leading-relaxed text-base text-black">
+                                            It's vital to your business to maintain firm control of service level compliance. Monitor and assess the performance of
+                                            your counterparties.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- card 6 -->
+                        <div class="p-4 max-w-sm overflow-hidden">
+                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                                <div class="relative z-10 mx-auto max-w-md">
+                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                        <div
+                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                            <img src="./assets/list-icon.png" alt="">
+                                        </div>
+                                        <h2 class="text-black text-xl font-semibold">Reporting</h2>
+                                    </div>
+                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                        <p class="leading-relaxed text-base text-black">
+                                            Immediate and granular reporting, presents and delivers your data as intelligence, taking your efficiency, response
+                                            times and proactivity to the next level.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- card 7 -->
+                        <div class="p-4 max-w-sm overflow-hidden">
+                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                                <div class="relative z-10 mx-auto max-w-md">
+                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                        <div
+                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                            <img src="./assets/list-icon.png" alt="">
+                                        </div>
+                                        <h2 class="text-black text-xl font-semibold">Network Management</h2>
+                                    </div>
+                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                        <p class="leading-relaxed text-base text-black">
+                                            The only end-to-end Network and Vendor Management platform that will transform your processes and procedures to gain
+                                            major efficiencies and support you in Recovery and Resilience planning
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -419,7 +538,7 @@
     <div class="relative">
         <!-- Cost Management -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Cost Management</h2>
                     <p class="mb-6">
@@ -431,27 +550,17 @@
                     <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
                         href="#">Learn More</a>
                 </div>
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
             </div>
         </section>
     
         <!-- Due Diligence -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-100">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Due Diligence</h2>
@@ -469,7 +578,7 @@
     
         <!-- Client Onboarding -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Client Onboarding</h2>
                     <p class="mb-6">
@@ -480,27 +589,17 @@
                     <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
                         href="#">Learn More</a>
                 </div>
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
             </div>
         </section>
     
         <!-- Account Workflow and Automation -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-100">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Account Workflow and Automation</h2>
@@ -517,7 +616,7 @@
     
         <!-- Performance Oversight -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Performance Oversight</h2>
                     <p class="mb-6">
@@ -528,27 +627,17 @@
                     <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
                         href="#">Learn More</a>
                 </div>
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
             </div>
         </section>
     
         <!-- Reporting -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-100">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Reporting</h2>
@@ -565,7 +654,7 @@
     
         <!-- Network Management -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
-            <div class="xs:mt-52 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Network Management</h2>
                     <p class="mb-6">
@@ -577,13 +666,8 @@
                     <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
                         href="#">Learn More</a>
                 </div>
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <img class="w-full rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                        alt="office content 1">
-                    <img class="mt-4 w-full lg:mt-10 rounded-lg"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                        alt="office content 2">
+                <div class="grid grid-cols-1 gap-4 mt-8">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
                 </div>
             </div>
         </section>
