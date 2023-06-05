@@ -14,6 +14,43 @@ html, body {
     margin: 0;
 }
 
+#spin {}
+
+#spin:after {
+    content: "";
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        content: "Cost Management";
+    }
+
+    15% {
+        content: "Due Diligence";
+    }
+
+    30% {
+        content: "Client Onboarding";
+    }
+
+    45% {
+        content: "Account Automation";
+    }
+
+    60% {
+        content: "Performance Oversight";
+    }
+
+    75% {
+        content: "Reporting";
+    }
+
+    100% {
+        content: "Network Management";
+    }
+}
+
 .slider ul {
     padding: 0;
     list-style: none;
@@ -150,4 +187,14 @@ html, body {
 /* List Transition */
 ul a {
     transition: color 0.5s ease;
+}
+
+img {
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }

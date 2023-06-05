@@ -28,8 +28,7 @@
 
         <nav x-data="{ open: false }" class="xl:mx-24 2xl:mx-52 px-4 py-4 flex justify-between items-center bg-white">
             <a class="font-bold leading-none" href="">
-                <img src="assets/myriad-logo-transparent-white.png" class="hidden dark:block w-40 lg:w-56 cursor-pointer" alt="logo">
-                <img src="assets/myriad-logo-transparent.png" class="block dark:hidden w-40 lg:w-56 cursor-pointer" alt="logo">
+                <img src="assets/myriad-logo-transparent.png" class="w-40 lg:w-56 cursor-pointer select-none drag-none" alt="logo"/>
             </a>
             <div onclick="slideNavBar()" class="mr-8 lg:hidden">
                 <!-- hamburger -->
@@ -155,10 +154,9 @@
     </div>
 
 
-    <!-- Hero -->
-    <section id="hero" class="relative">
-        <div class="relative pt-16 pb-40 flex content-center items-center justify-center h-screen lg:h-full lg:min-h-full-75">
-            <!-- <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80');"> -->
+    <!-- Hero desktop -->
+    <section id="hero" class="hidden lg:block relative">
+        <div class="relative pt-16 pb-40 flex content-center items-center justify-center min-h-full-75">
             
             <div class="video-docker absolute top-0 left-0 w-full h-full bg-center bg-cover overflow-hidden z-0">
                 <video class="min-w-full min-h-full absolute object-cover" src="./assets/videos/newyork-skyscrapers.mp4" type="video/mp4" autoplay muted loop></video>
@@ -178,6 +176,32 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Hero mobile -->
+    <section id="hero" class="lg:hidden relative overflow-hidden">
+        <!-- Background image -->
+        <div class="relative overflow-hidden bg-cover bg-no-repeat bg-[50%] h-screen bg-[url('https://source.unsplash.com/uznoNqB5KyQ')]">
+            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed bg-[hsla(0,0%,0%,0.75)]">
+                <div class="flex h-screen items-center justify-center">
+
+                    <div class="-mt-16 px-6 text-center text-white md:px-12">                        
+                        <h1 class="text-4xl font-bold tracking-tight text-white">
+                            Revolutionised <span class="text-orange-500">Third-Party Management</span> for Financial Institutions.
+                        </h1>
+                        
+                        <p class="mt-12 text-md md:text-lg text-white">
+                            Establish complete control over your relationships, cut costs and boost operational efficiency with an integrated
+                            platform designed to fit your business.
+                        </p>
+                        <p class="mt-12 font-light md:text-3xl text-2xl text-white tracking-wide ">Delivering <span id="spin" class="text-transparent font-bold bg-clip-text bg-gradient-to-r from-orange-500 to-orange-400 "></span> <br />
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -355,14 +379,14 @@
 
     <!-- Card design on mobile -->
     <section class="lg:hidden flex flex-col bg-white m-auto p-auto">
-        <h1 class="flex py-5 px-5 mx-5 font-bold text-4xl text-gray-800">
-            What we offer
-        </h1>
         <!-- add myriad emblem to the left -->
-        <div class="myriad-emblem">
-        
+        <div class="myriad-emblem ">
+            <!-- <h1 class="flex px-5 font-bold text-4xl text-gray-800 z-10">
+                What we offer
+            </h1> -->
+            
             <div class="flex overflow-x-scroll pb-6 hide-scroll-bar ">
-                <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+                <div class="flex flex-nowrap">
                     <!-- card 1 -->
                     <div class="p-4 max-w-sm overflow-hidden">
                         <div
@@ -386,138 +410,150 @@
                             </div>
                         </div>
                     </div>
-    
+                    
                     <!-- card 2 -->
-                        <div class="p-4 max-w-sm overflow-hidden">
-                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
-                                <div class="relative z-10 mx-auto max-w-md">
-                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
-                                        <div
-                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
-                                            <img src="./assets/list-icon.png" alt="">
-                                        </div>
-                                        <h2 class="text-black text-xl font-semibold">Due Diligence</h2>
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
                                     </div>
-                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
-                                        <p class="leading-relaxed text-base text-black">
-                                            Often a demanding and drawn-out process. It can become a straightforward controlled procedure whilst gaining Operational
-                                            efficiencies
-                                        </p>
-                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Due Diligence</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     
-                        <!-- card 3 -->
-                        <div class="p-4 max-w-sm overflow-hidden">
-                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
-                                <div class="relative z-10 mx-auto max-w-md">
-                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
-                                        <div
-                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
-                                            <img src="./assets/list-icon.png" alt="">
-                                        </div>
-                                        <h2 class="text-black text-xl font-semibold">Client Onboarding</h2>
+                    <!-- card 3 -->
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
                                     </div>
-                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
-                                        <p class="leading-relaxed text-base text-black">
-                                            An efficient and cost-effective solution will reduce time-to-market, enhance your Clients' experience and provide
-                                            transparency and accountability throughout the process.
-                                        </p>
-                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Client Onboarding</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-        
-                        <!-- card 4 -->
-                        <div class="p-4 max-w-sm overflow-hidden">
-                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
-                                <div class="relative z-10 mx-auto max-w-md">
-                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
-                                        <div
-                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
-                                            <img src="./assets/list-icon.png" alt="">
-                                        </div>
-                                        <h2 class="text-black text-xl font-semibold">Account Workflow and Automation</h2>
-                                    </div>
-                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
-                                        <p class="leading-relaxed text-base text-black">
-                                            Complexity by market, account and product, coupled with increased volumes are driving the need for automation. Integrate
-                                            Improve efficiency and the integration of intelligent data across functions.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!-- card 5 -->
-                        <div class="p-4 max-w-sm overflow-hidden">
-                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
-                                <div class="relative z-10 mx-auto max-w-md">
-                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
-                                        <div
-                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
-                                            <img src="./assets/list-icon.png" alt="">
-                                        </div>
-                                        <h2 class="text-black text-xl font-semibold">Performance Oversight</h2>
-                                    </div>
-                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
-                                        <p class="leading-relaxed text-base text-black">
-                                            It's vital to your business to maintain firm control of service level compliance. Monitor and assess the performance of
-                                            your counterparties.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
                     
-                        <!-- card 6 -->
-                        <div class="p-4 max-w-sm overflow-hidden">
-                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
-                                <div class="relative z-10 mx-auto max-w-md">
-                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
-                                        <div
-                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
-                                            <img src="./assets/list-icon.png" alt="">
-                                        </div>
-                                        <h2 class="text-black text-xl font-semibold">Reporting</h2>
+                    <!-- card 4 -->
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
                                     </div>
-                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
-                                        <p class="leading-relaxed text-base text-black">
-                                            Immediate and granular reporting, presents and delivers your data as intelligence, taking your efficiency, response
-                                            times and proactivity to the next level.
-                                        </p>
-                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Account Automation</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-        
-                        <!-- card 7 -->
-                        <div class="p-4 max-w-sm overflow-hidden">
-                            <div class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                                <span class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
-                                <div class="relative z-10 mx-auto max-w-md">
-                                    <div class="flex items-center mb-3 leading-7 transition-all duration-700">
-                                        <div
-                                            class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
-                                            <img src="./assets/list-icon.png" alt="">
-                                        </div>
-                                        <h2 class="text-black text-xl font-semibold">Network Management</h2>
+                    </div>
+                    
+                    <!-- card 5 -->
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
                                     </div>
-                                    <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
-                                        <p class="leading-relaxed text-base text-black">
-                                            The only end-to-end Network and Vendor Management platform that will transform your processes and procedures to gain
-                                            major efficiencies and support you in Recovery and Resilience planning
-                                        </p>
-                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Performance Oversight</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    
+                    <!-- card 6 -->
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
+                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Reporting</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- card 7 -->
+                    <div class="p-4 max-w-sm overflow-hidden">
+                        <div
+                            class="group relative cursor-pointer overflow-hidden flex rounded-lg h-full bg-white p-8 flex-col shadow-lg ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                            <span
+                                class="absolute invisible top-auto z-0 h-10 w-10 rounded-full bg-cream transition-all duration-700 group-hover:visible group-hover:scale-[40]"></span>
+                            <div class="relative z-10 mx-auto max-w-md">
+                                <div class="flex items-center mb-3 leading-7 transition-all duration-700">
+                                    <div
+                                        class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-cream text-black flex-shrink-0">
+                                        <img src="./assets/list-icon.png" alt="">
+                                    </div>
+                                    <h2 class="text-black text-xl font-semibold">Network Management</h2>
+                                </div>
+                                <div class="flex flex-col justify-between flex-grow leading-7 transition-all duration-700">
+                                    <p class="leading-relaxed text-base text-black">
+                                        Simplify, automate and impose tight control over complex billing processes, identifying immediate
+                                        savings.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -539,19 +575,18 @@
         <!-- Cost Management -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Cost Management</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Cost Management</h2>
+                    <p>
                         Leveraging a sophisticated FEES module, we give you close command of the reconciliation of agent invoices to existing
                         schedules and internal transaction volumes, identifying redundant account charges and automating complex processes.
                         Through network rationalisation and the close ongoing scrutiny of account invoicing and schedule management, MYRIAD and
                         Embus can identify redundant accounts and eradicate unnecessary fees from the outset.
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <!-- <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww"> -->
+                    <img class="w-fit rounded-lg" src="./assets/cost-management.jpg">
                 </div>
             </div>
         </section>
@@ -560,18 +595,16 @@
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-100">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/Xe68GkSt2nk">
                 </div>
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Due Diligence</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Due Diligence</h2>
+                    <p>
                         Powerful delta management functionality and instantaneous information exchange means a dramatic workload reduction
                         year-on-year. Choose from products that provide either a standalone solution for Industry standard questionnaires at the
                         lowest cost in the market, or a comprehensive platform that wraps due diligence functionality into a complete agent
                         performance monitoring platform.
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
             </div>
         </section>
@@ -579,18 +612,16 @@
         <!-- Client Onboarding -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Client Onboarding</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Client Onboarding</h2>
+                    <p>
                         Run your onboarding function more efficiently by introducing automated processes which run in parallel, allowing you to
                         focus on informed decision-making. Shorten time-to-market, improving speed and accuracy, boosting transparency and
                         lowering costs through streamlined processes and services.
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/vWchRczcQwM">
                 </div>
             </div>
         </section>
@@ -599,17 +630,15 @@
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-100">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/1gf8BVYmy90">
                 </div>
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Account Workflow and Automation</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Account Workflow and Automation</h2>
+                    <p>
                         Automation is everything - and allowing you to configure your own account management procedures is an extremely
                         important part of what we offer. Process and control functions afford endless options for account and lifecycle
                         management through task-led, automated workflows..
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
             </div>
         </section>
@@ -617,18 +646,16 @@
         <!-- Performance Oversight -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Performance Oversight</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Performance Oversight</h2>
+                    <p>
                         All criteria by which you measure your providers is covered by our products, whether it be issues tracked and matched to
                         the SLA or automated RFP and scoring procedures. Cross-departmental workflows prevent fragmentation and duplication of
                         effort, meaning that such exercises as due diligence benefit from lean process and collaboration.
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/XK8NeUj6Gzs">
                 </div>
             </div>
         </section>
@@ -637,17 +664,15 @@
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-100">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 flex flex-col-reverse items-center py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/pypeCEaJeZY">
                 </div>
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Reporting</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Reporting</h2>
+                    <p>
                         If data is not reportable, either on paper or screen, in a format that suits your purposes, then its value and
                         accessibility are substantially reduced. The ability to summon reports that deliver intelligence to your screen or
                         inbox, and make available to chosen colleagues, all at the touch of a button, is a vital asset.
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
             </div>
         </section>
@@ -655,19 +680,17 @@
         <!-- Network Management -->
         <section class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-200">
             <div class="xs:mt-16 md:mt-32 lg:mt-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-                <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">Network Management</h2>
-                    <p class="mb-6">
+                <div class="font-light text-gray-500 xs:text-sm sm:text-lg">
+                    <h2 class="mb-4 text-4xl font-extrabold text-gray-900">Network Management</h2>
+                    <p>
                         All MYRIAD's modules combine to form a completely comprehensive solution for the Network and Vendor Management function.
                         Oversight of your counterparties , their reference data and documentation is complete down to the most granular element.
                         From RFP, through due diligence, invoice management, reporting and performance, governance is absolute and will deliver
                         substantial value in cost and productivity.
                     </p>
-                    <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
-                        href="#">Learn More</a>
                 </div>
                 <div class="grid grid-cols-1 gap-4 mt-8">
-                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/lCPhGxs7pww">
+                    <img class="w-fit rounded-lg" src="https://source.unsplash.com/wD1LRb9OeEo">
                 </div>
             </div>
         </section>
@@ -675,11 +698,11 @@
 
 
     <!-- Get Started Today -->
-    <section class="bg-gray-100 dark:bg-gray-900">
+    <section class="bg-gray-100">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-sm text-center">
-                <h2 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">Get started today</h2>
-                <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Book your free demo.</p>
+                <h2 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900">Get started today</h2>
+                <p class="mb-6 font-light text-gray-500 md:text-lg">Book your free demo.</p>
                     <a class="text-sm text-white font-bold rounded-xl px-6 py-2 bg-orange-500 transition duration-300 ease-in-out hover:bg-orange-600"
                         href="#">Request a demo</a>
             </div>
@@ -694,7 +717,7 @@
             <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 z-10">
                 <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <div>
-                        <img src="./assets/myriad-logo-transparent-white.png" class="-ml-4 w-60" alt="logo" />
+                        <img src="./assets/myriad-logo-transparent-white.png" class="-ml-4 w-60 select-none drag-none" alt="logo"/>
                         <div class="flex mt-8 space-x-6 text-white">
                             <a href="https://twitter.com/MYRIAD_GROUP" rel="noreferrer" target="_blank"
                                 class="text-orange-500 transition hover:text-orange-500/75">
@@ -826,7 +849,7 @@
             <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 z-10">
                 <div class="grid grid-cols-1 gap-8">
                     <div>
-                        <img src="./assets/myriad-logo-transparent-white.png" class="-ml-4 w-60" alt="logo" />
+                        <img src="./assets/myriad-logo-transparent-white.png" class="-ml-4 w-60 select-none drag-none" alt="logo"/>
                         <div class="flex mt-8 space-x-6 text-white">
                             <a href="https://twitter.com/MYRIAD_GROUP" rel="noreferrer" target="_blank"
                                 class="text-orange-500 transition hover:text-orange-500/75">
