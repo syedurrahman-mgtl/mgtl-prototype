@@ -14,8 +14,6 @@ html, body {
     margin: 0;
 }
 
-#spin {}
-
 #spin:after {
     content: "";
     animation: spin 10s linear infinite;
@@ -108,7 +106,6 @@ html, body {
     z-index: 2;
 }
 
-
 .myriad-emblem {
     position: relative;
     width: auto;
@@ -152,6 +149,8 @@ html, body {
     left: 0px;
 }
 
+/* Footer Accordions */
+
 /* Tab content - closed */
 .tab-content {
     max-height: 0;
@@ -187,14 +186,4 @@ html, body {
 /* List Transition */
 ul a {
     transition: color 0.5s ease;
-}
-
-img {
-    -o-object-fit: cover !important;
-    object-fit: cover !important;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
 }
