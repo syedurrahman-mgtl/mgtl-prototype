@@ -6,11 +6,11 @@
     scroll-behavior: smooth;
 }
 
-body {
+body  {
     overflow-x: hidden;
 }
 
-html, body {
+html, body  {
     margin: 0;
 }
 
